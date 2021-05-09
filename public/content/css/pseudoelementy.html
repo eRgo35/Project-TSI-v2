@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html style="overflow-y: hidden; overflow-x: auto; ">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pseudoelementy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        #first::first-line {
+            background: rgb(156, 156, 0);
+            text-decoration: underline;
+			font-size: 20pt;
+            
+        }
+        #dwa::first-letter {
+			margin-right: 10px;
+			background: linear-gradient(0deg, rgba(118,110,255,1) 0%, rgba(0,212,255,1) 100%);
+			padding: 10px;
+			border: 1px solid black;
+			font-size: 60pt;
+			float: left;
+        }
+		#trzy::first-letter {
+			margin-right: 10px;
+			background: linear-gradient(0deg, rgba(118,110,255,1) 0%, rgba(0,212,255,1) 100%);
+			padding: 10px;
+			border: 1px solid black;
+			font-size: 60pt;
+			float: left;
+        }
+        #ww {
+            padding: 10px;
+            border: 1px solid red;
+        }
+        #ww::before {
+            content: '?? ??';
+            background: cadetblue;
+            color: white;
+            border: 1px solid blue;
+        }
+        #ww::after {
+            content: "DAMY RADĘ TO ZROBIĆ";
+            background: green;
+            border: 1px solid darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <div id="first">Gotowanie – jeden z procesów obróbki termicznej stosowanych w gastronomii. Odbywa się w środowisku wrzącej wody. Podczas tego procesu białka zawarte w potrawie ścinają się, skrobia zaś rozkleja się, co powoduje, że składniki te stają się przyswajalne przez układ pokarmowy człowieka. Stosunkowo niska temperatura tego procesu, nieprzekraczająca stu kilkunastu stopni Celsjusza, sprawia iż w potrawie nie powstają szkodliwe dla zdrowia produkty rozkładu składników pokarmowych.</div>
+    <br />
+	<div id="dwa">Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum sapien massa ac turpis faucibus orci luctus non, consectetuer lobortis quis, varius in, purus. Integer ultrices posuere cubilia Curae, Nulla ipsum dolor lacus, suscipit adipiscing. Cum sociis natoque penatibus et ultrices volutpat. Nullam wisi ultricies a, gravida vitae, dapibus risus ante sodales lectus blandit eu, tempor diam pede cursus vitae, ultricies eu, faucibus quis, porttitor eros cursus lectus, pellentesque eget, bibendum a, gravida ullamcorper quam. Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel risus. Sed vel lectus. Ut sagittis, ipsum dolor quam.</div>
+    <br />
+	<div id="trzy">Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum sapien massa ac turpis faucibus orci luctus non, consectetuer lobortis quis, varius in, purus. Integer ultrices posuere cubilia Curae, Nulla ipsum dolor lacus, suscipit adipiscing. Cum sociis natoque penatibus et ultrices volutpat. Nullam wisi ultricies a, gravida vitae, dapibus risus ante sodales lectus blandit eu, tempor diam pede cursus vitae, ultricies eu, faucibus quis, porttitor eros cursus lectus, pellentesque eget, bibendum a, gravida ullamcorper quam. Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel risus. Sed vel lectus. Ut sagittis, ipsum dolor quam.</div>
+	<h3 id="ww">ZDAĆ DO DRUGIEJ KLASY</h3>
+    <h2 id="ww">ZDAĆ MATURĘ</h2>
+    <h2 id="ww">ZDAĆ EGZ ZAWODOWY</h2>
+    <br>
+    <br>
+</body>
+</html>

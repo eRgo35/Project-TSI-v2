@@ -1,0 +1,19 @@
+<article>
+    <h2>Wsparcie dla nowych elementów HTML5</h2>
+    <h5>Znaczniki budowy strony w HTML5, <time datetime="2019-02-21 6:22PM">Luty 2019</time></h5>
+    <p class="first">Powyższe sekcje są nowymi elementami w HTML5, dlatego starsze przeglądarki ich nie rozpoznają.
+        Strona zbudowana przy użyciu tych nowych sekcji może nie wyświetlać się prawidłowo w starszych przeglądarkach,
+        dlatego musimy im pomóc rozpoznać te elementy.</p>
+    <p>W starszych przeglądarkach elementy te zostaną potraktowane jako elementy liniowe, dlatego przy
+        użyciu CSS musimy nadać im blokowy charakter (div jest elementem blokowym).</p>
+    <br>
+    <section id="css">
+        header, nav, main, aside, footer, article, section {<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        display: block;<br><br>
+        }
+    </section>
+    <br>
+    <p>Zmiany tej możemy dokonać poprzez własność CSS display. Przyjmuje ona m.in
+        znane nam już wartości inline oraz block. Żeby elementy te były elementami blokowymi, wystarczy, że grupowo
+        przypiszemy do nich tą własność.</p>
+</article>

@@ -1,0 +1,72 @@
+<!--# ------------------------ #-->
+<!--#      Copyright® 2018     #-->
+<!--#        Michał Czyż       #-->
+<!--#  Unauthorised Copying or #-->
+<!--#  	Editing is prohibited  #-->
+<!--# ------------------------ #-->
+<!DOCTYPE HTML>
+<html style="overflow-y: hidden; overflow-x: auto; ">
+<head>
+    <title>Formularz Zaliczenie</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&amp;subset=latin-ext" rel="stylesheet"/>
+    <meta charset="UTF-8"/>
+</head>
+<style>
+body{
+    background-color: rgb(107, 27, 27)
+}
+#header {
+    font-size: 35pt;
+    color: white;
+    text-align: center;
+    font-family: Roboto;
+}
+div {
+    text-align: center;
+}
+#labels, legend {
+    color: white;
+    font-family: Roboto;
+    font-size: 14pt;
+}
+#register {
+    font-family: Roboto;
+    font-size: 14pt; 
+    border-radius: 10px;
+}
+</style>
+<body>
+    <div><span id="header">FORMULARZ REJSTRACJI DO FORUM</span></div><br />
+    <form action="onclick" method="POST" enctype="text/plain">
+        <span id="labels">* Wymagane Pola</span><br /><br />
+        <span id="labels">Nazwa Użytkownika* (max 12 znaków): </span><input type="text" id="username" name="username" maxlength="12" required/><br /><br />
+        <span id="labels"><ins>A</ins>dres Email*: </span><input type="email" id="email" name="email" value="email@email.com" accesskey="A" tabindex="1" required/><br /><br />
+        <span id="labels">Hasło (min 8 znaków)*: </span><input type="password" id="password" name="password" minlength="8" required/><br /><br />
+        <span id="labels">Data Urodzenia*: </span><input type="date" id="birth" name="birth" required/><br /><br />
+        
+        <fieldset>
+            <legend>Płeć</legend>
+            <input type="radio" name="plec" id="plec" value="man"/><span id="labels"> Mężczyzna</span><br />
+            <input type="radio" name="plec" id="plec" value="woman"/><span id="labels"> Kobieta</span><br />
+            <input type="radio" name="plec" id="plec" value="man"/><span id="labels"> Inna</span>
+        </fieldset>
+        <br /><br />
+        <span id="labels">Wybierz swojego awatara*:<br /></span><input type="file" name="avatar" id="avatar" required/><br /><br />
+
+        <fieldset>
+            <legend>Dodatkowe informacje: </legend>
+            <span id="labels">Adres Zamieszkania: <br /></span>
+            <textarea cols="50" rows="5">
+
+            </textarea></br>
+            <span id="labels">Ulubiony kolor: </span><input type="color" name="kolor" id="kolor"/>
+        </fieldset><br /><br />
+
+        <input type="checkbox" name="regulamin" id="regulamin" required/><span id="labels">Zapoznałem/am się z Polityką Prywatności</span><br /><br />
+
+        <input type="submit" name="register" id="register" value="Zarejstruj Się"/>
+    </form>
+    <br>
+    <br>
+</body>
+</html>

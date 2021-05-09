@@ -1,0 +1,197 @@
+<!-- Copyright(R) 2019 Michał Czyż All Rights Reserved -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>Znaczniki budowy strony w HTML5</title>
+  <script src="content/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('section').load('content/slajd1.html');
+    });
+  </script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial;
+      padding: 20px;
+      background: #f1f1f1;
+    }
+
+    header {
+      padding: 20px;
+      font-size: 50px;
+      text-align: center;
+      background: white;
+      cursor: default;
+    }
+
+    nav {
+      padding: 10px;
+      font-size: 20px;
+      text-align: center;
+      background: white;
+      margin-top: 20px;
+    }
+
+    nav>a {
+      text-decoration: none;
+      color: black;
+      margin: 0 20px 0;
+      position: relative;
+      transition: all 0.3s ease-in-out 0s;
+    }
+
+    nav>a:hover {
+      color: blue;
+    }
+
+    nav>a:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background: blue;
+      visibility: hidden;
+      transform: scaleX(0);
+      transition: all 0.3s ease-in-out 0s;
+    }
+
+    nav>a:hover:before {
+      visibility: visible;
+      transform: scaleX(1);
+    }
+
+    section {
+      float: left;
+      width: 75%;
+    }
+    section#css {
+      float: unset;
+      width: unset;
+      background-color: rgb(230, 230, 230);
+      padding: 10px;
+    }
+
+    aside {
+      float: left;
+      width: 25%;
+      padding-left: 20px;
+    }
+
+    .fakeimg {
+      background-color: #aaa;
+      width: 100%;
+      padding: 20px;
+    }
+
+    article {
+      background-color: white;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    main:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    figure {
+      float: right;
+    }
+
+    footer {
+      padding: 20px;
+      text-align: center;
+      background: #ddd;
+      margin-top: 20px;
+    }
+
+    h2 {
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.2em;
+    }
+
+    @media screen and (max-width: 800px) {
+
+      section,
+      aside {
+        width: 100%;
+        padding: 0;
+      }
+    }
+
+    /* 3rd party styling */
+
+    .first::first-letter {
+      font-size: 40px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h2>Sekcje Strony</h2>
+  </header>
+
+  <nav>
+    <a href="#slajd1">Layout Strony</a>
+    <a href="#slajd2">Pudełka</a>
+    <a href="#slajd3">Znaczniki w HTML5</a>
+    <a href="#slajd4">Wsteczna kompatybilność</a>
+  </nav>
+
+  <main>
+    <section>
+      <p style="text-align: center; line-height: 3;">Easter Egg!!!</p>
+    </section>
+    <script>
+      function change_content() {
+        var links = $("nav a");
+        var page = $(this).attr('href').substring(1);
+        $('section').load('content/' + page + '.html');
+      }
+
+      $('nav a').click(change_content);
+
+    </script>
+    <aside>
+      <article>
+        <h3>O mnie</h3>
+        <div class="fakeimg" style="height:100px;">Obrazek</div>
+        <p>Jakiś tekst o mnie in culpa qui officia deserunt mollit anim..</p>
+      </article>
+      <article>
+        <h3>Popularne Posty</h3>
+        <div class="fakeimg">Obrazek</div><br>
+        <div class="fakeimg">Obrazek</div><br>
+        <div class="fakeimg">Obrazek</div>
+      </article>
+      <article>
+        <h3>Obserwuj Mnie</h3>
+        <p>Przykładowy Tekst ..</p>
+      </article>
+    </aside>
+  </main>
+
+  <footer>
+    <h2>Stopka</h2>
+  </footer>
+
+</body>
+
+</html>

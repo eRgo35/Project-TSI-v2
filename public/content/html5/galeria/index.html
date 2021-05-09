@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Galeria</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="ergo-framework-a-0.0.1.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Logo</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Strona Główna</a></li>
+                <li><a href="index.html">Podstrona 1</a></li>
+                <li><a href="index.html">Podstrona 2</a></li>
+                <li><a href="index.html">Podstrona 3</a></li>
+                <li><a href="index.html">Podstrona 4</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section><img class="img1 row1" onclick="openImage1();" onmouseover="fadeIn();" src="HTML.jpg"></section>
+        <section><img class="img2 row1" onclick="openImage2();" onmouseover="fadeIn();" src="Gekon.jpg"></section>
+        <section><img class="img3 row1" onclick="openImage3();" onmouseover="fadeIn();" src="Kot.jpg"></section>
+        <section><img class="img4 row2" onclick="openImage4();" onmouseover="fadeIn();" src="Pies.jpg"></section>
+        <section><img class="img5 row2" onclick="openImage5();" onmouseover="fadeIn();" src="Zyrafa.jpg"></section>
+        <section><img class="img6 row2" onclick="openImage6();" onmouseover="fadeIn();" src="Owoc.jpg"></section>
+    </main>
+    <footer>
+        <span>&copy; 2019 Michał Czyż</span>
+    </footer>
+    <div id="fader" onmouseover="fadeOut();"></div>
+</body>
+
+</html>

@@ -1,0 +1,199 @@
+<!--# ------------------------ #-->
+<!--#      Copyright® 2018     #-->
+<!--#        Michał Czyż       #-->
+<!--#  Unauthorised Copying or #-->
+<!--#  	Editing is prohibited  #-->
+<!--# ------------------------ #-->
+<!DOCTYPE HTML>
+<html style="overflow-y: hidden; overflow-x: auto; ">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Formularz</title>
+</head>
+
+<body>
+    <center>
+        <font size="12">PRZYKŁADOWY FORMULARZ</font>
+    </center>
+
+    <form action="onclick" method="post" enctype="text/plain">
+        <br />
+        <br />
+        IMIĘ I NAZWISKO: <input type="text" id="imie_i_nazwisko" />
+        <br />
+        <br />
+        ADRES E-MAIL: <input type="email" id="email" />
+        <br />
+        <br />
+        NICK (MAX 6 ZNAKÓW): <input type="name" maxlength="6" />
+        <br />
+        <br />
+        HASŁO: <input type="password" id="haslo" />
+        <br />
+        <br />
+        HASŁO v.2 (MIN 8 ZNAKÓW): <input type="password" id="haslo" minlength="8" />
+        <br />
+        <br />
+        <fieldset>
+            <legend>PŁEĆ:</legend>
+            <input type="radio" name="plec" value="mezczyzna" /> MĘŻCZYZNA
+            <br />
+            <input type="radio" name="plec" value="kobieta" /> KOBIETA
+        </fieldset>
+        <br />
+        <br />
+        <fieldset>
+            <legend>JĘZYKI, KTÓRYMI WŁADASZ:</legend>
+            <input type="checkbox" name="jezyki" value="ang" checked="checked" /> ANGIELSKI
+            <br />
+            <input type="checkbox" name="jezyki" value="nie" /> NIEMIECKI
+            <br />
+            <input type="checkbox" name="jezyki" value="chn" /> CHIŃSKI
+        </fieldset>
+        <br />
+        <br />
+        <select name="ulubione_owoce" multiple="multiple">
+            <optgroup label="ULUBIONE OWOCE">
+                <option value="truskawki">
+                    TRUSKAWKI
+                </option>
+                <option value="banany">
+                    BANANY
+                </option>
+                <option value="maliny">
+                    MALINY
+                </option>
+            </optgroup>
+        </select>
+        <select id="dni" name="dni" size="7" multiple="multiple">
+            <optgroup label="DNI WOLNE:">
+                <option value="sobota">
+                    SOBOTA
+                </option>
+                <option value="niedziela">
+                    NIEDZIELA
+                </option>
+            </optgroup>
+            <optgroup label="DNI ROBOCZE">
+                <option value="poniedziałek">
+                    PONIEDZIAŁEK
+                </option>
+                <option value="wtorek">
+                    WTOREK
+                </option>
+                <option value="sroda">
+                    ŚRODA
+                </option>
+                <option value="czwartek">
+                    CZWARTEK
+                </option>
+                <option value="piatek">
+                    PIĄTEK
+                </option>
+            </optgroup>
+        </select>
+        <input list="blok" name="przegladarki" />
+        <datalist id="blok">
+            <option value="Google Chrome"></option>
+            <option value="Mozilla Firefox"></option>
+            <option value="Opera"></option>
+            <option value="Internet Explorer"></option>
+            <option value="Safari"></option>
+        </datalist>
+        <br />
+        <br />
+        <textarea cols="50" rows="6">
+Jan Kowalski
+ul. Kwiatowa 7
+40-001 Katowice
+Polska</textarea>
+        <textarea cols="50" rows="6">Wprowadź swój adres</textarea>
+        <br />
+        <br />
+        <button type="reset" name="resetuj">Zresetuj</button>
+        <br />
+        <br />
+        <button type="button" name="opusc">Opuść stronę</button>
+        <br />
+        <br />
+        <button type="button" name="kup">Kupuj teraz!</button>
+        <br />
+        <br />
+        <input type="file" name="plik" value="Przeglądaj!" />
+        <br />
+        <br />
+        <label for="imie">
+            <ins>I</ins>mię:
+        </label>
+        <input type="text" id="imie" name="imie" tabindex="3" accesskey="I" />
+        <br />
+        <br />
+        PRZYCISK JAKO OBRAZEK:
+        <br />
+        <br />
+        <input type="image" name="obrazek" width="30%" src="../../pictures/Gekon.jpg" alt="Gekon" />
+        <br />
+        <br />
+        <fieldset>
+            <legend>Usprawnienia w formularzach (HTML 5)</legend>
+
+            <p>AutoFocus: <input type="text" id="imie" autofocus /></p>
+            <p>Autocomplete: <input type="text" id="imie" autocomplete /></p>
+            <p>Lista rozwijana: <input list="blok1" name="jezyki" />
+                <datalist id="blok1">
+                    <option value="Angielski"></option>
+                    <option value="Niemiecki"></option>
+                </datalist></p>
+            <p>Wypełnij: <input type="text" id="Imie" required /></p>
+            <p>E-mail: <input type="email" id="Email" required /></p>
+            <p>URL: <input type="url" id="url" required /></p>
+            <p>Liczba: <input type="number" id="liczba" required /></p>
+            <p>Data: <input type="date" id="data" required max="2005-01-01"/></p>
+            <p>Kolor: <input type="color" id="kolor" required /></p>
+            <p>Lista Rozwijana: <input list="blok2" name="przegladarki" /></p>
+            <datalist id="blok2">
+                <option value="Google Chrome">The Best</option>
+                <option value="Mozilla Firefox">Quite Good</option>
+                <option value="Opera">Very Suprised</option>
+                <option value="Internet Explorer">You must be kidding me!</option>
+                <option value="Safari">You're an iFan</option>
+            </datalist>
+    </form>
+    <form action="sign_up/index.php" oninput="x.value = parseInt(a.value) + parseInt(b.value)">
+        0
+        <input type="range" id="a" name="a" value="50" />
+        100 +
+        <input type="number" id="b" name="b" value="50" />
+        =
+        <output name="x" for="a b"></output>
+        <br />
+        <br />
+        <input type="submit" name="submit" />
+    </form>
+    <form action="onclick" oninput="x.value = parseInt(a.value) + parseInt(b.value)">
+        0
+        <input type="range" id="a" name="a" value="50" />
+        100 +
+        <input type="number" id="b" name="b" value="50" />
+        =
+        <output name="x" for="a b"></output>
+        <br />
+        <br />
+        <input type="submit" name="submit" />
+        <br />
+        <br />
+        <input list="przegladarki2" name="przegladarki2" />
+        <datalist id="przegladarki2">
+            <option value="Google Chrome"></option>
+            <option value="MS Edge"></option>
+            <option value="Internet Explorer"></option>
+            <option value="TOR"></option>
+        </datalist>
+    </form>
+    </fieldset>
+    </form>
+
+</body>
+
+</html>

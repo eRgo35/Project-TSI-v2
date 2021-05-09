@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:title" content="Tworzenie Stron Internetowych" />
+    <meta property="og:description" content="Strona ze wszystkimi pracami stworzonymi na przedmiocie TSI" />
+    <meta property="og:image" content="preview.png">
+    <meta property="og:url" content="https://tsi.michalczyz.ml">
+    <meta property="og:type" content="website" />
+    <title>Tworzenie Stron Internetowych</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/eRgo-Framework-a.1.0.0-min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+    <link id="theme" rel="stylesheet" type="text/css" media="screen" href="css/blue.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.body.scrollHeight + 10 + 'px';
+        }
+    </script>
+    <script>
+        function getCookie(e) {
+            var name = e + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+        if (getCookie("theme") == "") {
+            document.getElementById("theme").href = "css/blue.css";
+        }
+        else {
+            document.getElementById("theme").href = "css/" + getCookie("theme") + ".css";
+        }
+    </script>
+    <script type="text/javascript">
+        if (navigator.appName.indexOf("Internet Explorer") != -1 || navigator.userAgent.match(/Trident.*rv[ :]*11\./)) {
+            //This user uses Internet Explorer
+            window.location = "https://tsi1.mczyz.ml/1.5";
+        }
+    </script>
+    <script src="js/page-manager.js"></script>
+</head>
+
+<body>
+    <menu>
+        <a href="/" id="head-logo">
+            <h5><i class="fa fa-internet-explorer" aria-hidden="true"></i>Tworzenie Stron Internetowych</h5>
+        </a>
+        <a id="empty"></a>
+        <div id="theme-wrapper">
+            <a id="head-logo" class="theme" onclick="themeSelect();">
+                <i class="fa fa-paint-brush"></i>
+            </a>
+            <div id="theme-change">
+                <div id="theme-button" style="background: #00b0ff" onclick="themeBlue();"><i id="theme-status"
+                        class="Blue fa fa-check-circle-o"
+                        style="display: block; font-size: 1.9rem; margin-top: 2.5px;"></i></div>
+                <div id="theme-button" style="background: #66bb6a" onclick="themeGreen();"><i id="theme-status"
+                        class="Green fa fa-check-circle-o"
+                        style="display: none; font-size: 1.9rem; margin-top: 2.5px;"></i></div>
+                <div id="theme-button" style="background: #e53935" onclick="themeRed();"><i id="theme-status"
+                        class="Red fa fa-check-circle-o"
+                        style="display: none; font-size: 1.9rem; margin-top: 2.5px;"></i></div>
+                <div id="theme-button" style="background: #ffa000" onclick="themeYellow();"><i id="theme-status"
+                        class="Yellow fa fa-check-circle-o"
+                        style="display: none; font-size: 1.9rem; margin-top: 2.5px;"></i></div>
+            </div>
+        </div>
+    </menu>
+    <header>
+
+        <div class="mobile-sidebar" onclick="mobileSidebar();"><i class="fa fa-navicon"></i></div>
+
+        <span id="page-title">Strona Główna</span>
+
+    </header>
+    <div id="main">
+        <nav>
+            <ul>
+                <a id="navbar-link" class="active"></a>
+                <li>
+                    <h4 onclick="dropHTML();">Podstawy HTML<i id="1" class="fa fa-sort-up"></i></h4>
+                </li>
+                <div id="html-dropdown">
+                    <li><a class="navbar-links" href="#nauczyciele">Nauczyciele</a></li>
+                    <li><a class="navbar-links" href="#zdjecia">Zdjęcia</a></li>
+                    <li><a class="navbar-links" href="#tabela">Tabela</a></li>
+                    <li><a class="navbar-links" href="#listy">Listy</a></li>
+                    <li><a class="navbar-links" href="#formularz">Formularz</a></li>
+                    <li><a class="navbar-links" href="#tabela_spr">Tabela Zaliczenie</a></li>
+                    <li><a class="navbar-links" href="#listy_spr">Listy Zaliczenie</a></li>
+                    <li><a class="navbar-links" href="#formularz_spr">Formularz Zaliczenie</a></li>
+                </div>
+                <li>
+                    <h4 onclick="dropCSS();">Podstawy CSS<i id="2" class="fa fa-sort-up"></i></h4>
+                </li>
+                <div id="css-dropdown">
+                    <li><a class="navbar-links" href="#wlasciwosci_css">Właściwości CSS</a></li>
+                    <li><a class="navbar-links" href="#klasa_iden">Klasa i Identyfikator</a></li>
+                    <li><a class="navbar-links" href="#tabele_css">Tabele CSS</a></li>
+                    <li><a class="navbar-links" href="#pseudoelementy">Pseudoelementy</a></li>
+                    <li><a class="navbar-links" href="#basn">Pseudoelementy - Baśń</a></li>
+                    <li><a class="navbar-links" href="#selektor_elementu">Selektor Elementu</a></li>
+                    <li><a class="navbar-links" href="#selektor_atrybutu">Selektor Atrybutu</a></li>
+                    <li><a class="navbar-links" href="#selektor_atrybutu_2">Selektor Atrybutu
+                            2</a></li>
+                    <li><a class="navbar-links" href="#selektor_atrybutu_3">Selektor Atrybutu
+                            3</a></li>
+                </div>
+                <li>
+                    <h4 onclick="dropHTML5();">Strony HTML5<i id="3" class="fa fa-sort-up"></i></h4>
+                </li>
+                <div id="html5-dropdown">
+                    <li><a target="_BLANK" class="navbar-links" href="./content/html5/uklad1/index.html">Układ 1</a>
+                    </li>
+                    <li><a target="_BLANK" class="navbar-links" href="./content/html5/uklad2/uklad2.html">Układ 2</a>
+                    </li>
+                    <li><a target="_BLANK" class="navbar-links"
+                            href="./content/html5/zwierzeta/index.html">Zwierzęta</a></li>
+                    <li><a target="_BLANK" class="navbar-links" href="./content/html5/galeria/index.html">Galeria</a>
+                    </li>
+                    <li><a target="_BLANK" class="navbar-links" href="./content/html5/menu/index.html">Menu</a></li>
+                    <li><a target="_BLANK" class="navbar-links"
+                            href="./content/html5../pozycjonowanie/index.html">Pozycjonowanie</a></li>
+                    <li><a target="_BLANK" class="navbar-links"
+                            href="./content/html5../pozycjonowanie1/index.html">Pozycjonowanie 1</a></li>
+                    <li><a target="_BLANK" class="navbar-links"
+                            href="./content/html5../pozycjonowanie2/index.html">Pozycjonowanie 2</a></li>
+                </div>
+                <li>
+                    <h4 onclick="dropDOCS();">Dokumenty<i id="4" class="fa fa-sort-up"></i></h4>
+                </li>
+                <div id="docs-dropdown">
+                    <li><a href="./content/docs/lista.docx" download>Lista - Word</a></li>
+                    <li><a target="_BLANK" href="./content/docs/lista.pdf">Lista - PDF</a></li>
+                    <li><a href="/files/Budowa-Strony-HTML5.zip" download>Budowa Strony HTML5</a></li>
+                </div>
+                <li>
+                    <h4 onclick="dropMEDIA();">Multimedia HTML5<i id="5" class="fa fa-sort-up"></i></h4>
+                </li>
+                <div id="media-dropdown">
+                    <li><a class="navbar-links" href="#multimedia">Multimedia</a></li>
+                </div>
+                <li>
+                    <h4 onclick="dropLINKS();">Linki<i id="6" class="fa fa-sort-up"></i></h4>
+                </li>
+                <div id="links-dropdown">
+                    <li><a class="extLinks" target="_BLANK" href="https://www.google.com">
+                            <j style="color: #4285F4;">G</j>
+                            <j style="color: #DB4437;">o</j>
+                            <j style="color: #F4B400;">o</j>
+                            <j style="color: #4285F4;">g</j>
+                            <j style="color: #0F9D58;">l</j>
+                            <j style="color: #DB4437;">e</j>
+                        </a></li>
+                    <li><a class="extLinks" target="_BLANK" href="http://zspm.pl">
+                            <j
+                                style="color: white; background: #00396b; border: 2px solid #00529b; border-radius: 5px;">
+                                ZSPM</j>
+                        </a></li>
+                    <li><a class="extLinks" target="_BLANK" href="http://tsi-pai.cba.pl">
+                            <j
+                                style="color: yellow; background: linear-gradient(to bottom, gray, #cc66cc); border: 2px solid silver; border-radius: 5px;">
+                                TSI-PAI.CBA.PL</j>
+                        </a></li>
+                    <li><a class="extLinks" target="_BLANK" href="https://michalczyz.ml">MICHALCZYZ.ML</a></li>
+                    <li><a class="extLinks" target="_BLANK" href="https://radio.michalczyz.ml">RADIO POLIGRAF<img
+                                src="../pictures/radio-Poligraf.png" style="height: 1rem; margin-left: 5px;"></a></li>
+                    <li><a class="extLinks" target="_BLANK" href="https://js-calc.cf">JS CALC<img
+                                src="../pictures/logo-Jscalc.png" style="height: 1rem; margin-left: 5px;"></a></li>
+                </div>
+            </ul>
+        </nav>
+        <div id="fader" onclick="mobileSidebarClose();"></div>
+        <div id="content">
+            <iframe id="subLoad" onload="resizeIframe(this)" src="./content/main.html"></iframe>
+        </div>
+        <script src="js/link-manager.js"></script>
+    </div>
+    <footer>
+        <div id="copy">
+            <span>Copyright&copy; 2018-2019 Michał Czyż</span><br>
+            <span>Kopiowanie kodu źródłowego HTML/CSS/JS w całości lub fragmentach bez zgody autora
+                zabronione.</span><br>
+            <span>Stara Strona wciąż dostępna pod tym linkiem, lecz nie będzie aktualizowana: <a
+                    style="color: white !important;" href="https://tsi1.mczyz.ml/1.5">Link</a>.</span>
+        </div>
+    </footer>
+</body>
+
+</html>

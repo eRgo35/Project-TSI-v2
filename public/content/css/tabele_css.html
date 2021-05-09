@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html style="overflow-y: hidden; overflow-x: auto; ">
+<head>
+    <meta charset="utf-8" />
+    <title>Tabele CSS</title>
+    <style>
+        table.jeden {
+            border: 1px solid blue;
+            border-collapse: collapse;
+            width: 40%;
+            table-layout: fixed;
+        }
+        td.jeden {
+            border: 1px solid blue;
+            width: 40%;
+            table-layout: fixed;
+        }
+        table.one {
+            width: 80%;
+            border-collapse: collapse;
+        }
+        th.one {
+            border: 3px solid red;
+            background-color: lightblue;
+            padding: 10px;
+            text-transform: uppercase;
+        }
+        td.one {
+            border: 2px solid lime;
+            padding: 10px;
+            background-color: #ff6;
+            empty-cells: show;
+        }
+        table.dwa {
+            border-top: 1px solid aqua;
+            width: 80%;
+            border-collapse: collapse;
+        }
+        tr.dwa {
+            border-top: 1px solid aqua;
+        }
+        td.dwa {
+            border-top: 1px solid aqua;
+            padding: 8px;
+        }
+        th.dwa {
+            text-align: left;
+            padding: 8px;
+        }
+        tr.dwa:hover {
+            background-color: aqua;
+        }
+        table.trzy {
+            width: 80%;
+            border-collapse: collapse;
+        }
+        td.trzy {
+            padding: 8px;
+        }
+        th.trzy {
+            text-align: left;
+            padding: 8px;
+        }
+        tr.trzy:hover {
+            background-color: silver;
+        }
+        tr.trzy {
+            border-top: 1px solid silver;
+        }
+        tr.trzy:nth-last-child(even):hover {
+            background-color: #f25Ef2;
+        }
+        table.trzy-cell {
+            width: 80%;
+            border-collapse: collapse;
+        }
+        td.trzy-cell {
+            padding: 8px;
+        }
+        th.trzy-cell {
+            text-align: left;
+            padding: 8px;
+        }
+        td.trzy-cell:hover {
+            background-color: silver;
+        }
+        tr.trzy-cell {
+            border-top: 1px solid silver;
+        }
+        td.trzy-cell:nth-last-child(odd):hover {
+            background-color: #f25Ef2;
+        }
+        table.cztery {
+            width: 50%;
+            border: 1px solid black;
+        }
+        th.cztery {
+            background-color: yellow;
+            color: red;
+        }
+        th.piec, td.piec, tr.piec {
+            border: 1px solid black;
+        }
+        table.piec {
+            width: 50%;
+        }
+        th.piec {
+            background-color: yellow;
+            color: red;
+        }
+        table.noc {
+            border: 5px outset brown;
+            border-spacing: 10px;
+            width: 50%;
+        }
+        th.noc {
+            border: 5px inset lightgray;
+            background-color: pink;
+            color: blue;
+        }
+        td.noc {
+            border: 5px outset brown;
+        }
+        table.pink {
+            border-collapse: collapse;
+            border: 2px solid black;
+            width: 50%;
+        }
+        td.pink {
+            border: 2px solid black;
+        }
+        th.pink {
+            border: 2px solid silver;
+            background-color: pink;
+            color: purple;
+        }
+        table.caption1 {
+            width: 50%;
+            border: 2px solid aqua;
+            background-color: black;
+        }
+        th.caption1 {
+            background-color: aqua;
+            color: blue;
+            border: 2px solid aqua;
+        }
+        td.caption1 {
+            background-color: black;
+            color: white;
+            border: 1px solid aqua;
+        }
+        caption.caption1 {
+            text-align: center;
+            margin-right: 10px;
+            vertical-align: middle;
+            width: 80pt;
+            background-color: black;
+            border: 1px solid aqua;
+            color: white;
+        }
+        table.caption2 {
+            width: 50%;
+            border: 2px solid aqua;
+            background-color: black;
+        }
+        th.caption2 {
+            background-color: aqua;
+            color: blue;
+            border: 2px solid aqua;
+        }
+        td.caption2 {
+            background-color: black;
+            color: white;
+            border: 1px solid aqua;
+        }
+        caption.caption2 {
+            text-align: center;
+            margin-right: 10px;
+            vertical-align: middle;
+            width: 80pt;
+            background-color: black;
+            border: 1px solid aqua;
+            color: white;
+        }
+        table.zagnezdzona {
+            border: 1px solid red;
+            background-color: darkblue;
+            color: white;
+            width: 50%;
+        }
+        tr.zagnezdzona {
+            border: 1px solid red;
+        }
+        th.zagnezdzona {
+            border: 1px solid red;
+            background-color: red;
+        }
+        td.zagnezdzona {
+            border: 1px solid red;
+        }
+        table.inside {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <table class="jeden">
+        <tr class="jeden">
+            <td class="jeden">komórka 1-1</td>
+            <td class="jeden">komórka 2-1</td>
+            <td class="jeden">komórka 3-1</td>
+        </tr class="jeden">
+        <tr class="jeden">
+            <td class="jeden">komórka 2-1</td>
+            <td class="jeden">komórka 2-2</td>
+            <td class="jeden">komórka 2-3</td>
+        </tr class="jeden">
+        <tr class="jeden">
+            <td class="jeden">komórka 3-1</td>
+            <td class="jeden">komórka 3-2</td>
+            <td class="jeden">komórka 3-3</td>
+        </tr>
+    </table>
+    <br />
+    <hr />
+    <br />
+    <table class="one">
+        <tr class="one">
+            <th class="one">NR</td>
+            <th class="one">NAZWISKO I IMIĘ</td>
+            <th class="one">OBECNOŚĆ</td>
+        </tr>
+        <tr class="one">
+            <td class="one">1</td>
+            <td class="one">Anna Nowak</td>
+            <td class="one">Tak</td>
+        </tr>
+        <tr class="one">
+            <td class="one">2</td>
+            <td class="one">Jan Kowalski</td>
+            <td class="one">Tak</td>
+        </tr>
+        <tr class="one">
+            <td class="one">3</td>
+            <td class="one">Krzysztof Kwiatkowski</td>
+            <td class="one">Tak</td>
+        </tr>
+        <tr class="one">
+            <td class="one">4</td>
+            <td class="one">Filip</td>
+            <td class="one"></td>
+        </tr>
+        <tr class="one">
+            <td class="one">5</td>
+            <td class="one">Maja</td>
+        </tr>
+    </table>
+    <br />
+    <hr />
+    <br />
+    <table class="dwa">
+        <tr class="dwa">
+            <th class="dwa">Pierwsze Imię</td>
+            <th class="dwa">Nazwisko</td>
+            <th class="dwa">Zarobek na godz.</td>
+        </tr>
+        <tr class="dwa">
+            <td class="dwa">Peter</td>
+            <td class="dwa">Griffin</td>
+            <td class="dwa">$100</td>
+        </tr>
+        <tr class="dwa">
+            <td class="dwa">Louis</td>
+            <td class="dwa">Griffin</td>
+            <td class="dwa">$150</td>
+        </tr>
+        <tr class="dwa">
+            <td class="dwa">Joe</td>
+            <td class="dwa">Swanson</td>
+            <td class="dwa">$300</td>
+        </tr>
+        <tr class="dwa">
+            <td class="dwa">Clevland</td>
+            <td class="dwa">Brown</td>
+            <td class="dwa">$250</td>
+        </tr>
+    </table>
+    <br />
+    <hr />
+    <br />
+    <table class="trzy">
+        <tr class="trzy">
+            <th class="trzy">Pierwsze Imię</td>
+            <th class="trzy">Nazwisko</td>
+            <th class="trzy">Zarobek na godz.</td>
+        </tr>
+        <tr class="trzy">
+            <td class="trzy">Peter</td>
+            <td class="trzy">Griffin</td>
+            <td class="trzy">$100</td>
+        </tr>
+        <tr class="trzy">
+            <td class="trzy">Louis</td>
+            <td class="trzy">Griffin</td>
+            <td class="trzy">$150</td>
+        </tr>
+        <tr class="trzy">
+            <td class="trzy">Joe</td>
+            <td class="trzy">Swanson</td>
+            <td class="trzy">$300</td>
+        </tr>
+        <tr class="trzy">
+            <td class="trzy">Clevland</td>
+            <td class="trzy">Brown</td>
+            <td class="trzy">$250</td>
+        </tr>
+    </table>
+    <br />
+    <br />
+    <table class="trzy-cell">
+        <tr class="trzy-cell">
+            <th class="trzy-cell">Pierwsze Imię</td>
+            <th class="trzy-cell">Nazwisko</td>
+            <th class="trzy-cell">Zarobek na godz.</td>
+        </tr>
+        <tr class="trzy-cell">
+            <td class="trzy-cell">Peter</td>
+            <td class="trzy-cell">Griffin</td>
+            <td class="trzy-cell">$100</td>
+        </tr>
+        <tr class="trzy-cell">
+            <td class="trzy-cell">Louis</td>
+            <td class="trzy-cell">Griffin</td>
+            <td class="trzy-cell">$150</td>
+        </tr>
+        <tr class="trzy-cell">
+            <td class="trzy-cell">Joe</td>
+            <td class="trzy-cell">Swanson</td>
+            <td class="trzy-cell">$300</td>
+        </tr>
+        <tr class="trzy-cell">
+            <td class="trzy-cell">Clevland</td>
+            <td class="trzy-cell">Brown</td>
+            <td class="trzy-cell">$250</td>
+        </tr>
+    </table>
+    <br />
+    <hr />
+    <br />
+    <table class="cztery">
+        <tr class="cztery">
+            <th class="cztery">1</th>
+            <th class="cztery">2</th>
+        </tr>
+        <tr class="cztery">
+            <td class="cztery">a</td>
+            <td class="cztery">b</td>
+        </tr>
+    </table>
+    <br />
+    <hr />
+    <br />
+    <table class="piec">
+        <tr class="piec">
+            <th class="piec">I</th>
+            <th class="piec">II</th>
+        </tr>
+        <tr class="piec">
+            <td class="piec">i</td>
+            <td class="piec">ii</td>
+        </tr>
+    </table>
+    <br />
+    <hr />
+    <br />
+    <table class="noc">
+        <tr class="noc">
+            <th class="noc">Pracownik</th>
+            <th class="noc">Data rozpoczęcia</th>
+            <th class="noc">Data zakończenia</th>
+            <th class="noc">Staż</th>
+        </tr>
+        <tr class="noc">
+            <td class="noc">Bartosz R.</td>
+            <td class="noc">12/04/2000</td>
+            <td class="noc">02/02/2011</td>
+            <td class="noc">11 lat</td>
+        </tr>
+        <tr class="noc">
+            <td class="noc">Tomasz D.</td>
+            <td class="noc">07/06/2009</td>
+            <td class="noc">do teraz</td>
+        </tr>
+    </table>
+    <br />
+    <hr />
+    <br />
+    <table class="pink">
+        <tr class="pink">
+            <th class="pink">Pracownik</th>
+            <th class="pink">Data rozpoczęcia</th>
+            <th class="pink">Data zakończenia</th>
+        </tr>
+        <tr class="pink">
+            <td class="pink">Bartosz R.</td>
+            <td class="pink">12/04/2000</td>
+            <td class="pink">02/02/2011</td>
+        </tr>
+        <tr class="pink">
+            <td class="pink">Tomasz D.</td>
+            <td class="pink">07/06/2009</td>
+            <td class="pink">do teraz</td>
+        </tr>
+        <tr class="pink">
+            <td class="pink">Stefan H.</td>
+            <td class="pink">11/09/2012</td>
+            <td class="pink"></td>
+        </tr>
+    </table>
+    <br />
+    <hr />
+    <br />
+    <table class="caption1">
+        <tr class="caption1">
+            <caption class="caption1">Schemat kontroli pracowników</caption>
+            <th class="caption1">Pracownik</th>
+            <th class="caption1">Data rozpoczęcia</th>
+            <th class="caption1">Data zakończenia</th>
+        </tr>
+        <tr class="caption1">
+            <td class="caption1">Bartosz R.</td>
+            <td class="caption1">12/04/2000</td>
+            <td class="caption1">02/02/2011</td>
+        </tr>
+        <tr class="caption1">
+            <td class="caption1">Tomasz D.</td>
+            <td class="caption1">07/06/2009</td>
+            <td class="caption1">do teraz</td>
+        </tr>
+    </table>
+    <br />
+    <hr />
+    <br />
+    <table class="caption2">
+        <tr class="caption2">
+            <caption class="caption2">Kto się kiedy urodził - czas na imprezkę</caption>
+            <th class="caption2">Imię</th>
+            <th class="caption2">Data urodzenia</th>
+            <th class="caption2">Wiek</th>
+        </tr>
+        <tr class="caption2">
+            <td class="caption2">Kuba</td>
+            <td class="caption2">20 I</td>
+            <td class="caption2">15</td>
+        </tr>
+        <tr class="caption2">
+            <td class="caption2">Basia</td>
+            <td class="caption2">30 IX</td>
+            <td class="caption2">*</td>
+        </tr>
+        <tr class="caption2">
+            <td class="caption2">Paweł</td>
+            <td class="caption2">7 VI</td>
+            <td class="caption2">32</td>
+        </tr>
+        <tr class="caption2">
+            <td class="caption2">Joasia</td>
+            <td class="caption2">13 IV</td>
+            <td class="caption2">*</td>
+        </tr>
+        <tr class="caption2">
+            <td class="caption2">Krzysiu</td>
+            <td class="caption2">25 VIII</td>
+            <td class="caption2">18</td>
+        </tr>
+    </table>
+    <br />
+    <hr />
+    <br />
+    <table class="zagnezdzona">
+        <tr class="zagnezdzona">
+            <th class="zagnezdzona">Pracownik</th>
+            <th class="zagnezdzona">Data rozpoczęcia</th>
+            <th class="zagnezdzona">Data zakończenia</th>
+        </tr>
+        <tr class="zagnezdzona">
+            <td class="zagnezdzona">Bartosz R.</td>
+            <td class="zagnezdzona">12/04/2000</td>
+            <td class="zagnezdzona">02/02/2011</td>
+        </tr>
+        <tr class="zagnezdzona">
+            <td class="zagnezdzona">Bartosz R.</td>
+            <td class="zagnezdzona" colspan="2" rowspan="2">
+                <table class="zagnezdzona inside">
+                    <tr class="zagnezdzona inside">
+                        <th class="zagnezdzona inside">Pracownik</th>
+                        <th class="zagnezdzona inside">Data rozpoczęcia</th>
+                    </tr>
+                    <tr class="zagnezdzona inside">
+                        <td class="zagnezdzona inside">Bartosz R.</td>
+                        <td class="zagnezdzona inside">12/04/2000</td>
+                    </tr>
+                    <tr class="zagnezdzona inside">
+                        <td class="zagnezdzona inside">Tomasz D.</td>
+                        <td class="zagnezdzona inside">07/06/2009</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr class="zagnezdzona">
+            <td class="zagnezdzona">Bartosz R.</td>
+        </tr>
+        <tr class="zagnezdzona">
+            <th class="zagnezdzona">Pracownik</th>
+            <th class="zagnezdzona">Data rozpoczęcia</th>
+            <th class="zagnezdzona">Data zakończenia</th>
+        </tr>
+    </table>
+    <br>
+    <br>
+</body>
+</html>

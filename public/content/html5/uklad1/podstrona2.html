@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Strona Główna</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100%;
+        }
+
+        #wrapper {
+            margin: 10px;
+            width: 1000px;
+            border-radius: 20px;
+            background: rgb(216, 216, 216);
+            padding: 10px;
+        }
+
+        #header {
+            padding: 7px 0 10px;
+        }
+
+        a {
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 4px 8px 4px;
+            margin: 0 10px 0;
+            color: black;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 18px;
+            transition: all 0.5s ease-in-out;
+        }
+
+        a:hover {
+            color: blue;
+            transition: all 0.5s ease-in-out;
+        }
+
+        #content {
+            margin: 10px;
+            background: rgb(173, 173, 173);
+            padding: 10px;
+            overflow: scroll;
+        }
+
+        #footer {
+            margin: 10px;
+            padding: 2px;
+            background: rgb(131, 131, 131);
+        }
+
+        #logo {
+            border: unset;
+            border-radius: unset;
+            padding: unset;
+            margin: unset;
+            color: unset;
+            text-decoration: unset;
+            text-transform: unset;
+            font-size: unset;
+            transition: unset;
+        }
+        img {
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <a id="logo" href="index.html">
+                <h1>LOGO</h1>
+            </a>
+        </div>
+        <div id="nav">
+            <a href="index.html">Strona Główna</a>
+            <a href="podstrona1.html">Podstrona 1</a>
+            <a href="podstrona2.html">Podstrona 2</a>
+            <a href="podstrona3.html">Podstrona 3</a>
+            <a href="podstrona4.html">Podstrona 4</a>
+        </div>
+        <div id="content">
+                <p><img src="Kot.jpg"></p>
+        </div>
+        <div id="footer">
+            <h4>&copy; 2019 Michał Czyż</h4>
+        </div>
+    </div>
+</body>
+
+</html>
